@@ -46,4 +46,7 @@ sed -i 's/display_errors =.*/display_errors=On/' "$PHP_FILE"
 
 systemctl restart apache2
 
+snap install ponysay
+
+ponysay "L'installation est terminé ! Si vous avez des problèmes par la suite sur les droits des fichiers pour /var/www/html, relancer le script !"
 echo "Installation terminé!"
