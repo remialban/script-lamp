@@ -48,5 +48,7 @@ systemctl restart apache2
 
 snap install ponysay
 
-ponysay "L'installation est terminé ! Si vous avez des problèmes par la suite sur les droits des fichiers pour /var/www/html, relancer le script ! Appuyez sur q pour sortir du terminal !" | less -R
+prenom=$(getent passwd $CONNECTED_USER | cut -d ":" -f5 | cut -d " " -f1)
+
+ponysay "L'installation est terminé ! Si vous avez des problèmes par la suite sur les droits des fichiers pour /var/www/html, relancer le script ! Appuyez sur q pour sortir du terminal ! Bon courrage $CONNECTED_USER !" | less -R
 echo "Installation terminé!"
