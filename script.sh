@@ -7,6 +7,7 @@ apt-get update
 apt-get install -y libapache2-mod-php
 apt-get install -y mariadb-server
 apt-get install -y php-pdo php-pdo-mysql
+apt-get install -y git
 
 systemctl enable --now apache2
 systemctl enable --now mariadb
