@@ -44,6 +44,10 @@ PHP_FILE=/etc/php/${PHP_VERSION}/apache2/php.ini
 
 sed -i 's/display_errors =.*/display_errors=On/' "$PHP_FILE"
 
+PHP_FILE_CONSOLE=/etc/php/${PHP_VERSION}/cli/php.ini
+
+sed -i 's/display_errors =.*/display_errors=On/' "$PHP_FILE_CONSOLE"
+
 systemctl restart apache2
 
 snap install ponysay
